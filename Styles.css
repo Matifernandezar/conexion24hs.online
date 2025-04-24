@@ -53,4 +53,65 @@ body {
     font-size: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
   }
-  
+  /* Tarjetas de casino */
+.casino-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.casino-card:hover {
+  transform: translateY(-5px);
+}
+
+.casino-card img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.casino-card h5 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+  color: #111;
+}
+
+.casino-card .rating {
+  color: #ffcc00;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.casino-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.casino-card a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.casino-card a:hover {
+  background: #1ebe5d;
+}
+
+/* Adaptación responsive para tarjetas */
+@media (min-width: 768px) {
+  .casino-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+}
