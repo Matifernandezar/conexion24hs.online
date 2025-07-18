@@ -1,117 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-    color: #333;
-  }
-  header {
-    background: #111;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  .container {
-    padding: 30px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  .content {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    line-height: 1.6;
-  }
-  .btn-link {
-    display: block;
-    width: fit-content;
-    margin: 30px auto 0;
-    padding: 12px 24px;
-    background: #25D366;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-  }
-  footer {
-    text-align: center;
-    font-size: 13px;
-    color: #888;
-    margin-top: 40px;
-    padding-bottom: 20px;
-  }
-  .btn-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: #fff;
-    padding: 15px 18px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
-  /* Tarjetas de casino */
-.casino-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-bottom: 30px;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 50px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo-box {
+  background: #002a5c;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.content {
+  padding: 30px;
   text-align: center;
-  transition: transform 0.2s ease;
 }
 
-.casino-card:hover {
-  transform: translateY(-5px);
-}
-
-.casino-card img {
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-}
-
-.casino-card h5 {
-  margin: 15px 0 10px;
-  font-size: 18px;
-  color: #111;
-}
-
-.casino-card .rating {
-  color: #ffcc00;
-  font-size: 16px;
+.logos img {
+  height: 90px; /* antes era 60px */
   margin-bottom: 10px;
 }
 
-.casino-card p {
+h2 {
+  margin-bottom: 20px;
+  color: #002a5c;
+}
+
+.formulario {
+  text-align: left;
+}
+
+label {
   font-size: 14px;
+  color: #003366;
+  display: block;
+  margin-top: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #e9f0fc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background-color: #002a5c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.links {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.links a {
+  color: #003366;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #444;
+}
+.logo-box img {
+  width: 80px; /* antes era 50px */
+}
+/* ======== HEADER ======== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 18px;
+  color: #0056a0;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.logo span small {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
   color: #666;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.usuario select {
+  padding: 5px 8px;
+  font-size: 14px;
+}
+
+/* ======== MENÚ SUPERIOR ======== */
+.menu {
+  background: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 12px 18px;
+  border-right: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+main {
+  padding: 25px 30px;
+}
+
+h2 {
+  color: #0074c0;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* ======== SECCIONES ======== */
+.periodos,
+.encuestas,
+.inscripciones {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.periodos {
+  flex: 2;
+  min-width: 300px;
+}
+
+.encuestas,
+.inscripciones {
+  flex: 1;
+  min-width: 240px;
+}
+
+.periodos h3,
+.encuestas h3,
+.inscripciones h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* ======== BLOQUES DE INFORMACIÓN ======== */
+.bloque {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
   margin-bottom: 15px;
 }
 
-.casino-card a {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #25D366;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s ease;
+.bloque ul {
+  margin: 10px 0;
+  padding-left: 18px;
 }
 
-.casino-card a:hover {
-  background: #1ebe5d;
+.bloque button {
+  background-color: #0056a0;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Adaptación responsive para tarjetas */
-@media (min-width: 768px) {
-  .casino-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+/* ======== ENCUESTAS ======== */
+.alerta {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* ======== INSCRIPCIONES ======== */
+.inscripciones select {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.inscripciones h4 {
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #444;
+}
+
+.inscripciones table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.inscripciones th,
+.inscripciones td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.inscripciones .vacio {
+  height: 24px;
+}
+/* ======================= */
+/*    DISEÑO RESPONSIVE    */
+/* ======================= */
+@media (max-width: 992px) {
+  .contenido {
+    flex-direction: column;
   }
+
+  .usuario {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+  }
+
+  .menu li {
+    flex: 1 1 auto;
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .usuario {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu li {
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .bloque button {
+    width: 100%;
+  }
+
+  .inscripciones table th,
+  .inscripciones table td {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+/* ========== MIS EXÁMENES ========== */
+.examenes {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 240px;
+}
+
+.examenes h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.tabla-examenes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-examenes th,
+.tabla-examenes td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.tabla-examenes th {
+  background-color: #f1f1f1;
+}
+
+.aprobado {
+  color: green;
+  font-weight: bold;
+}
+
+.aprobado1 {
+  color: red;
+  font-weight: bold;
 }
